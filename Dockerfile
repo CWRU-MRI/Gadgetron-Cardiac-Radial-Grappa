@@ -20,4 +20,4 @@ RUN cd /opt/case/HoloLens_send_images && \
     cd build && \
     cmake ../ && \
     make install 
-
+RUN /sbin/ldconfig -v
