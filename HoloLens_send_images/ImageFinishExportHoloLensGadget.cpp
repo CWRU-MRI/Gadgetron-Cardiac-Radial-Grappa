@@ -131,18 +131,13 @@ namespace Gadgetron{
 
 	if(exportToVis){
 		//Get address of host, and port of socket
-		socket_address_file.open(filename_socket_address);
-		std::string host_name;
-		std::string port_name_init;
-		std::string port_name_image;
-		std::getline(socket_address_file,host_name);
-		std::getline(socket_address_file,port_name_init);
-		std::getline(socket_address_file,port_name_image);
+		std::string host_name = hololens_ip.value();
+		std::string port_name_init = hololens_init_port.value();
+		std::string port_name_image =hololens_image_port.value();
 		host = new char[host_name.length()+1];
 		std::strcpy(host,host_name.c_str());
 		port_init = std::stoi(port_name_init);
 		port_image = std::stoi(port_name_image);
-		socket_address_file.close();
 		//host = "10.10.0.110";
 		//port = 4447;
 

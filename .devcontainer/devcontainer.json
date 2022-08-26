@@ -1,0 +1,42 @@
+{
+	"image":"ghcr.io/cwru-mri/gadgetron:v3.14.1-add-klt-setter",
+    
+    "settings": {
+		"terminal.integrated.inheritEnv": true, // this is so that the "code" executable is available from the integrated terminal
+		"cmake.configureOnOpen": true,
+		"cmake.preferredGenerators": [
+			"Ninja",
+			"Unix Makefiles"
+		],
+		"cmake.configureSettings": {
+			"USE_CUDA": "ON",
+			"USE_MKL": "ON"
+		},
+		"indentRainbow.includedLanguages": [ "yaml", "python" ]
+	},
+
+	"runArgs": ["--init", "--network=host", "--gpus=all"],
+
+	"mounts": [
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		9002
+	],
+	
+	"extensions": [
+		"ms-vscode.cpptools",
+		"ms-vscode.cmake-tools",
+		"ms-vscode.live-server",
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"matepek.vscode-catch2-test-adapter",
+		"mhutchie.git-graph",
+		"ms-azuretools.vscode-docker",
+		"ms-python.python",
+		"oderwat.indent-rainbow",
+		"timonwong.shellcheck"
+	]
+
+}

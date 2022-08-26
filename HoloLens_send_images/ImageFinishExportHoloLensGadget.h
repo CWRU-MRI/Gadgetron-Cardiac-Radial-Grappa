@@ -39,12 +39,13 @@ namespace Gadgetron{
 	ACE_SOCK_Stream client_stream_;
 	ACE_INET_Addr remote_addr_;
 	ACE_SOCK_Connector connector_;
-	char filename_socket_address[256] = "/home/mri/Documents/Dominique/Gadgetron_code/socket_addresses/socket_address_image.txt";
-	ifstream socket_address_file;
 	
 	int process_called_times_ = 0;
 	GADGET_PROPERTY(perform_timing, bool, "Whether to perform timing", false);
 	GADGET_PROPERTY(verbose, bool, "Whether to output debugging statements", false);
+	GADGET_PROPERTY(hololens_ip, std::string, "The IP address to use for the Hololens client", "192.168.0.100");
+	GADGET_PROPERTY(hololens_init_port, std::string, "The port to use for Hololens initialization data", "8080");
+	GADGET_PROPERTY(hololens_image_port, std::string, "The port to use for Hololens image data", "8081");
 
     };
 }

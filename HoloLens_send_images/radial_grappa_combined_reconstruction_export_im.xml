@@ -182,6 +182,9 @@ NOTE! For now, assumes RO oversampling is removed before GRAPPA (weights kernel 
         <classname>ImageFinishExportHoloLensGadget</classname>
         <property><name>perform_timing</name><value>true</value></property>  
         <property><name>verbose</name><value>true</value></property>
+        <property><name>hololens_ip</name><value>192.168.0.100</value></property>
+        <property><name>hololens_init_port</name><value>8080</value></property>
+        <property><name>hololens_image_port</name><value>8081</value></property>
     </gadget>
 
 <!--
